@@ -1,0 +1,82 @@
+// ШРИФТ
+
+//&display=swap
+
+//----------------------
+
+// ПЕРЕМЕННЫЕ
+// Шрифт по умолчанию
+$fontFamily: "Arial";
+$fontSize: 16px;
+$mainColor: #000;
+
+// Контейнер
+$containerPadding: 20px;
+$containerMaxWidth: 1060px + $containerPadding * 2;
+$mobilewidth: 940px;
+
+// Весь экран
+$minWidth: 320px - ($containerPadding * 2);
+//----------------------
+//ГОТОВЫЙ НАСТРОЕННЫЙ КОД
+.wrapper {
+  width: 100%;
+  min-width: $minWidth;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+body {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $mainColor;
+  &.hide {
+    overflow: hidden;
+  }
+}
+.main {
+  flex: 1 1 auto;
+}
+._container {
+  max-width: $containerMaxWidth;
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+.pcb {
+  display: block !important;
+  @media (max-width: $mobilewidth) {
+    display: none !important;
+  }
+}
+.mb {
+  display: none !important;
+  @media (max-width: $mobilewidth) {
+    display: block !important;
+  }
+}
+.pcf {
+  display: flex !important;
+  @media (max-width: $mobilewidth) {
+    display: none !important;
+  }
+}
+.mf {
+  display: none !important;
+  @media (max-width: $mobilewidth) {
+    display: flex !important;
+  }
+}
+.pcg {
+  display: grid !important;
+  @media (max-width: $mobilewidth) {
+    display: none !important;
+  }
+}
+.mg {
+  display: none !important;
+  @media (max-width: $mobilewidth) {
+    display: grid !important;
+  }
+}
+//-------------------------------------
